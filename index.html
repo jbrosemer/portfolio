@@ -44,10 +44,10 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6 {font-family: "Montserrat
   <header class="w3-container w3-center" style="padding:64px 16px" id="home">
     <h1 class="w3-jumbo"><b>Jordyn Brosemer</b></h1>
     <p>Aspiring Robotics Engineer</p>
-    <img src="./images/meagain.JPG" alt="boy" class="w3-image w3-round" width="992" height="1108">
+    <img src="./images/meagain.JPG" alt="boy" class="w3-image w3-round" width="992" height="1108" style="padding:16px">
     <p></p>
     <a href="resumefeb2022.pdf"><button class="w3-button w3-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> Download Resume
+      <i class="fa fa-download"></i><b> Check out my Resume!</b>
     </button></a>
   </header>
   <!-- Modal for full size images on click-->
@@ -62,20 +62,31 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6 {font-family: "Montserrat
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="portfolio">
     <h2>Portfolio - Also on my Github!  <a href= "https://github.com/jbrosemer"><i class="fa fa-github-square w3-hover-opacity"></i></a></h2>
     <div class="w3-row-padding">
-      <div class="w3-half w3-hover-opacity">
-        <img src="./images/spider.jpg" style="width:100%" onclick="onClick(this)" alt="Brachiating robot desgined to traverse a monkey bar course.">
+      <div class="w3-half">
+        <div class ="w3-hover-opacity">
+          <img src="./images/spider.jpg" style="width:100%" onclick="onClick(this)" alt="Brachiating robot desgined to traverse a monkey bar course.">
+        </div>
+        <div class ="w3-hover-opacity">
         <img src="./images/wallace.png" style="width:100%" onclick="onClick(this)" alt="Self Balancing Robot that could pick itself up using its arms and balanced with combined data from a  Lidar and an IMU">
+      </div>
+      <div class ="w3-hover-opacity">
         <img src="./images/saltbae.jpeg" style="width:100%" onclick="onClick(this)" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt">
       </div>
+      </div>
   
-      <div class="w3-half w3-hover-opacity">
-        <img src="./images/atlas.jpg" style="width:100%" onclick="onClick(this)" alt="Atlas, the ball catcher and tosser robot. The camera inside detects a users face and if they want the ball to center themselves in frame">
-        <img src="./images/bakingbuddy.jpg" style="width:100%" onclick="onClick(this)" alt="The Baking Buddy was a final project for Embedded Systems. Using a force sensor and UART users could specify what ingredients they want as well as how much, and the right amount of the ingredient specified would dispense into their bowl.">
-        <img src="./images/clock.jpeg" style="width:100%" onclick="onClick(this)" alt="Artistic clock designed to display the time using dots by projection, a funny take on dot projection I guess">
+      <div class="w3-half">
+        <div class ="w3-hover-opacity">
+          <img src="./images/atlas.jpg" style="width:100%" onclick="onClick(this)" alt="Atlas, the ball catcher and tosser robot. The camera inside detects a users face and if they want the ball to center themselves in frame">
+        </div>
+        <div class ="w3-hover-opacity">
+          <img src="./images/bake.jpeg" style="width:100%" onclick="onClick(this)" alt="The Baking Buddy was a final project for Embedded Systems. Using a force sensor and UART users could specify what ingredients they want as well as how much, and the right amount of the ingredient specified would dispense into their bowl.">
+        </div>
+        <div class ="w3-hover-opacity">
+          <img src="./images/clock.jpeg" style="width:100%" onclick="onClick(this)" alt="Artistic clock designed to display the time using dots by projection, a funny take on dot projection I guess">
+        </div>
       </div>
     </div>
-  
-  <!-- End Portfolio Section -->
+    <!-- End Portfolio Section -->
   </div>
 
   <!-- About Section -->
