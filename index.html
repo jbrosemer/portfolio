@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-<title>Jordyn's Work</title>
+<title>Jordyn Brosemer</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {background-color: lightsteelblue;} h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px} i {margin-right: 10px;
+body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
 }
 </style>
 <body>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-light-blue w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:20%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Exit</a>
-  <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">My Projects</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-</nav>
-
-<!-- Top menu -->
-<!--
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="margin:auto">
-    <a href="mail.html">
-      <div class="w3-button w3-right w3-padding-16" onclick="onClick(this)"><b>Mail</b></div>
-    </a>
-    <div class="w3-center w3-padding-16"><b>Home</b></div>
-  </div>  
-</div>
--->
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="margin-top:100px">
+<!-- Page Content -->
+<div class="w3-padding-small" id="main">
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:64px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Jordyn Brosemer</b></h1>
+    <p>Aspiring Robotics Engineer</p>
+    <img src="./images/meagain.JPG" alt="boy" class="w3-image w3-round" width="992" height="1108">
+    <p></p>
+    <a href="resumefeb2022.pdf"><button class="w3-button w3-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </button></a>
+  </header>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">✕</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+    <!-- Photo grid -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="portfolio">
+    <h2>Portfolio - Also on my Github!  <a href= "https://github.com/jbrosemer"><i class="fa fa-github-square w3-hover-opacity"></i></a></h2>
+    <div class="w3-row-padding">
+      <div class="w3-half w3-hover-opacity">
+        <img src="./images/spider.jpg" style="width:100%" onclick="onClick(this)" alt="Brachiating robot desgined to traverse a monkey bar course.">
+        <img src="./images/wallace.png" style="width:100%" onclick="onClick(this)" alt="Self Balancing Robot that could pick itself up using its arms and balanced with combined data from a  Lidar and an IMU">
+        <img src="./images/saltbae.jpeg" style="width:100%" onclick="onClick(this)" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt">
+      </div>
   
-  <hr id="about">
+      <div class="w3-half w3-hover-opacity">
+        <img src="./images/atlas.jpg" style="width:100%" onclick="onClick(this)" alt="Atlas, the ball catcher and tosser robot. The camera inside detects a users face and if they want the ball to center themselves in frame">
+        <img src="./images/bakingbuddy.jpg" style="width:100%" onclick="onClick(this)" alt="The Baking Buddy was a final project for Embedded Systems. Using a force sensor and UART users could specify what ingredients they want as well as how much, and the right amount of the ingredient specified would dispense into their bowl.">
+        <img src="./images/clock.jpeg" style="width:100%" onclick="onClick(this)" alt="Artistic clock designed to display the time using dots by projection, a funny take on dot projection I guess">
+      </div>
+    </div>
+  
+  <!-- End Portfolio Section -->
+  </div>
 
   <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">  
-    <h3><b>About Me, Not The Robots</b></h3><br>
-    <img src="./images/meagain.JPG" style="width:90%" onclick="onClick(this)" class="w3-round w3-margin-bottom" alt="">
-    <div class="w3-padding-32">
-      <h4><b>Aspiring Robotics Engineer</b></h4>
-        <p>Hi, I'm Jordyn Brosemer and I'm an engineer aspiring to work in the field of robotics. I love creating the means for robots to move as well as the designing and building of the robots themselves. I am currently a master's student at Tufts University, studying electrical engineering in human robot interaction and I plan to graduate in the winter of 2022. I got my BS from Lafayette College where I studied electrical and computer engineering. Aside from these hands on personal projects I enjoy hiking, playing instruments and listening to music, and exaggerating my personality on my portfolio website. </p>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About</h2>
+    <img src="./images/me smiling.JPG" alt="boy" class="w3-image w3-round">
+    <hr class="w3-opacity">
+    <p>Hi, I'm Jordyn Brosemer and I'm an engineer aspiring to work in the field of robotics. I love creating the means for robots to move as well as the designing and building of the robots themselves. I am currently a master's student at Tufts University, studying electrical engineering in human robot interaction and I plan to graduate in the winter of 2022. I got my BS from Lafayette College where I studied electrical and computer engineering. Aside from these hands on personal projects I enjoy hiking, playing instruments and listening to music, and exaggerating my personality on my portfolio website. </p>
+  <!-- End About Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Somerville, MA</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i><a href="mailto:jordynbrosemer@gmail.com">Send me an email!</a></p>
     </div>
-  </div>
-  <hr>
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="projects">
-    <h3><b>My Projects</b></h3><br>
-    <div class="w3-quarter">
-    <a href = "clock.html">
-        <img src="./images/not-so-analog-clock.jpg" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="Also has another clock inside">
-    </a>
-      <h3>Analog Clock</h3>
-      <p>An Analog Clock Designed to project the time with light</p>
-    </div>
-    <div class="w3-quarter">
-        <a href = "clock.html">
-            <img src="./images/spider.jpg" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="Does whatever a spider pig does">
-        </a>
-          <h3>Spider-Bot</h3>
-          <p>Spider Robot Designed to move through a monkey bar course</p>
-        </div>
-    <div class="w3-quarter">
-        <a href = "clock.html">
-            <img src="./images/atlas.jpg" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="I've got the whole world in my hands">
-        </a>
-          <h3>Atlas</h3>
-          <p>Ball Catcher and Tosser using Face Detection, Lidar, Limit Switches to pass and receieve tennis balls</p>
-        </div>
-    <div class="w3-quarter">
-        <a href = "clock.html">
-            <img src="./images/salt-arm.jpg" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="Salty!">
-        </a>
-            <h3>Salt Bae</h3>
-            <p>A rotating rack and pinion, using software I wrote to write letters from simple equations with salt</p>
-        </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-third">
-        <a href = "clock.html">
-            <img src="./images/bakingbuddy.JPG" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="You don't bake?">
-        </a>
-          <h3>The Baking Buddy</h3>
-          <p>Controlled by the microcontroller PIC32, uses UART commands to know what to dispense and weighs the dispensed ingredients</p>
-        </div>
-    <div class="w3-third">
-        <a href = "clock.html">
-            <img src="./images/wallace.png" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="Balance, I hardly know her?">
-        </a>
-            <h3>Wall-B</h3>
-            <p>Wall-E, but can Balance. Fully 3D printed robot using lidar and IMU's to balance and lift itself</p>
-        </div>
-    <div class="w3-third">
-        <a href = "clock.html">
-            <img src="./images/colorsorter.jpg" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="Can Dogs really not see colors?">
-        </a>
-            <h3>Color Sorter</h3>
-            <p>Designed to pour any amount of colored blocks and separate them and sort them. Uses arduino to identify and open loop control to set which cup the shapes enter</p>
-        </div>
-  </div>
+  <!-- End Contact Section -->
+  </div>  
   
   <!-- Footer -->
-  <hr>
-  <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-half">
-      <h3 class="w3-center">Thanks for visiting!</h3>
-      <p class="w3-center">This website was built using <a href="https://www.w3schools.com/" target="_blank"><u>w3</u></a> tools rather than bootstrap. For more information about me, feel free to visit any of the pages to the right. </p>
-    </div>
-  
-    <div class="w3-half w3-center">
-      <h3>Find me here</h3>
-      <a href= "https://github.com/jbrosemer">
-        <i class="fa fa-github-square w3-hover-opacity" style="font-size:36px"></i>
-      </a>
-      <a href= "https://www.linkedin.com/in/jbrosemer/">
-        <i class="fa fa-linkedin w3-hover-opacity" style="font-size:36px"></i>
-      </a>
-      <a href= "mail.html">
-        <i class="fa fa-envelope-o w3-hover-opacity" style="font-size:36px"></i>
-      </a>
-    </div>
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+  <p style="font-size:12px"><i>Alternatively find me here!</i></p>
+    <a href ="https://www.instagram.com/jordynbros/?hl=en"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/jordynbros"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href= "https://www.linkedin.com/in/jbrosemer/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href= "https://github.com/jbrosemer"><i class="fa fa-github-square w3-hover-opacity"></i></a>
+  <!-- End footer -->
   </footer>
-</hr>
-
-<!-- End page content -->
+  
+<!-- END PAGE CONTENT -->
 </div>
 
-<script>    
-// Script to open and close sidebar
-function w3_open() {
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
   document.getElementById("mySidebar").style.display = "block";
 }
- 
-function w3_close() {
+function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 </script>
 
