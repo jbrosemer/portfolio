@@ -11,7 +11,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <style>
 body {background-color: lightsteelblue;} h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
+.w3-bar-block .w3-bar-item {padding:20px} i {margin-right: 10px;
+}
 </style>
 <body>
 
@@ -24,21 +25,34 @@ body {background-color: lightsteelblue;} h1,h2,h3,h4,h5,h6 {font-family: "Karma"
 </nav>
 
 <!-- Top menu -->
+<!--
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
     <a href="mail.html">
-      <div class="w3-button w3-right w3-padding-16" onclick="onClick(this)">Mail</div>
+      <div class="w3-button w3-right w3-padding-16" onclick="onClick(this)"><b>Mail</b></div>
     </a>
-    <div class="w3-center w3-padding-16">Home</div>
+    <div class="w3-center w3-padding-16"><b>Home</b></div>
   </div>  
 </div>
-  
+-->
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="margin-top:100px">
+  
+  <hr id="about">
 
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3><b>About Me, Not The Robots</b></h3><br>
+    <img src="./images/meagain.JPG" style="width:90%" onclick="onClick(this)" class="w3-round w3-margin-bottom" alt="">
+    <div class="w3-padding-32">
+      <h4><b>Aspiring Robotics Engineer</b></h4>
+        <p>Hi, I'm Jordyn Brosemer and I'm an engineer aspiring to work in the field of robotics. I love creating the means for robots to move as well as the designing and building of the robots themselves. I am currently a master's student at Tufts University, studying electrical engineering in human robot interaction and I plan to graduate in the winter of 2022. I got my BS from Lafayette College where I studied electrical and computer engineering. Aside from these hands on personal projects I enjoy hiking, playing instruments and listening to music, and exaggerating my personality on my portfolio website. </p>
+    </div>
+  </div>
+  <hr>
   <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+  <div class="w3-row-padding w3-padding-16 w3-center" id="projects">
+    <h3><b>My Projects</b></h3><br>
     <div class="w3-quarter">
     <a href = "clock.html">
         <img src="./images/not-so-analog-clock.jpg" style="width:100%" onclick="onClick(this)" class="w3-round w3-margin-bottom w3-hover-opacity" alt="Also has another clock inside">
@@ -94,20 +108,8 @@ body {background-color: lightsteelblue;} h1,h2,h3,h4,h5,h6 {font-family: "Karma"
         </div>
   </div>
   
-  <hr id="about">
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">  
-    <h3>About Me, Not The Robots</h3><br>
-    <img src="./images/meagain.JPG" style="width:90%" onclick="onClick(this)" class="w3-round w3-margin-bottom" alt="">
-    <div class="w3-padding-32">
-      <h4><b>Aspiring Robotics Engineer</b></h4>
-        <p>Hi, I'm Jordyn Brosemer and I'm an engineer aspiring to work in the field of robotics. I love creating the means for robots to move as well as the designing and building of the robots themselves. I am currently a master's student at Tufts University, studying electrical engineering in human robot interaction and I plan to graduate in the winter of 2022. I got my BS from Lafayette College where I studied electrical and computer engineering. Aside from these hands on personal projects I enjoy hiking, playing instruments and listening to music, and exaggerating my personality on my portfolio website. </p>
-    </div>
-  </div>
-  <hr>
-  
   <!-- Footer -->
+  <hr>
   <footer class="w3-row-padding w3-padding-32">
     <div class="w3-half">
       <h3 class="w3-center">Thanks for visiting!</h3>
@@ -117,13 +119,17 @@ body {background-color: lightsteelblue;} h1,h2,h3,h4,h5,h6 {font-family: "Karma"
     <div class="w3-half w3-center">
       <h3>Find me here</h3>
       <a href= "https://github.com/jbrosemer">
-        <i class="fa fa-github-square" style="font-size:36px"></i>
+        <i class="fa fa-github-square w3-hover-opacity" style="font-size:36px"></i>
       </a>
       <a href= "https://www.linkedin.com/in/jbrosemer/">
-        <i class="fa fa-linkedin" style="font-size:36px"></i>
+        <i class="fa fa-linkedin w3-hover-opacity" style="font-size:36px"></i>
+      </a>
+      <a href= "mail.html">
+        <i class="fa fa-envelope-o w3-hover-opacity" style="font-size:36px"></i>
       </a>
     </div>
   </footer>
+</hr>
 
 <!-- End page content -->
 </div>
