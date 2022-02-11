@@ -50,6 +50,12 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
 #gifs-rows2 img {
   cursor: pointer;
 }
+#gifs-rows3 img {
+  cursor: pointer;
+}
+#gifs-rows5 img {
+  cursor: pointer;
+}
 #gifs-rows .gif-file {
   display:none;
 }
@@ -57,6 +63,12 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
   display:none;
 }
 #gifs-rows2 .gif-file2 {
+  display:none;
+}
+#gifs-rows3 .gif-file3 {
+  display:none;
+}
+#gifs-rows5 .gif-file5 {
   display:none;
 }
 .container:hover .overlay {
@@ -112,14 +124,16 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
       </div>
   
       <div class="w3-half">
-        <div class ="w3-hover-opacity">
-          <img src="./images/atlas.jpg" style="width:100%" onclick="onClick(this)" alt="Atlas, the ball catcher and tosser robot. The camera inside detects a users face and if they want the ball to center themselves in frame">
+        <div id="gifs-rows3">
+          <img src="./images/atlas.jpg" alt="Atlas, the ball catcher and tosser robot. The camera inside detects a users face and if they want the ball to center themselves in frame" class="preset-file3" style="width:100%" onclick="onClick(this)">
+          <img src="./images/atlasgif.gif" alt="Atlas, the ball catcher and tosser robot. The camera inside detects a users face and if they want the ball to center themselves in frame" class="gif-file3" style="width:100%" onclick="onClick(this)">
         </div>
         <div class ="w3-hover-opacity">
           <img src="./images/bake.jpeg" style="width:100%" onclick="onClick(this)" alt="The Baking Buddy was a final project for Embedded Systems. Using a force sensor and UART users could specify what ingredients they want as well as how much, and the right amount of the ingredient specified would dispense into their bowl.">
         </div>
-        <div class ="w3-hover-opacity">
-          <img src="./images/clock.jpeg" style="width:100%" onclick="onClick(this)" alt="Artistic clock designed to display the time using dots by projection, a funny take on dot projection I guess">
+        <div id="gifs-rows5">
+          <img src="./images/clock.jpeg" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt" class="preset-file5" style="width:100%" onclick="onClick(this)">
+          <img src="./images/clockgif.gif" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt" class="gif-file5" style="width:100%" onclick="onClick(this)">
         </div>
       </div>
     </div>
@@ -188,6 +202,14 @@ $("img", "#gifs-rows1").hover(function() {
 $("img", "#gifs-rows2").hover(function() {
   $('.preset-file2').toggle();
   $('.gif-file2').toggle();
+});
+$("img", "#gifs-rows3").hover(function() {
+  $('.preset-file3').toggle();
+  $('.gif-file3').toggle();
+});
+$("img", "#gifs-rows5").hover(function() {
+  $('.preset-file5').toggle();
+  $('.gif-file5').toggle();
 });
 </script>
 </head>
