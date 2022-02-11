@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montserrat", sans-serif}
+body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 .bgimg {
   background-position: center;
@@ -31,7 +31,26 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
   transition: .5s ease;
   background-color: #008CBA;
 }
-.button4 {font-family: "Montserrat", sans-serif}
+#gifs-rows img {
+  cursor: pointer;
+}
+#gifs-rows1 img {
+  cursor: pointer;
+}
+#gifs-rows2 img {
+  cursor: pointer;
+}
+
+
+#gifs-rows .gif-file {
+  display:none;
+}
+#gifs-rows1 .gif-file1 {
+  display:none;
+}
+#gifs-rows2 .gif-file2 {
+  display:none;
+}
 .container:hover .overlay {
   opacity: 1;
 }
@@ -43,8 +62,7 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:64px 16px" id="home">
     <h1 class="w3-jumbo"><b>Jordyn Brosemer</b></h1>
-    <p1>Aspiring Robotics Engineer</p1>
-    <p></p>
+    <p>Aspiring Robotics Engineer</p>
     <img src="./images/meagain.JPG" alt="boy" class="w3-image w3-round" width="992" height="1108" style="padding:16px">
     <p></p>
     <a href="resumefeb2022.pdf"><button class="button button4" w3-grey w3-padding-large w3-margin-top">
@@ -67,15 +85,21 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
     <h2>Portfolio - Also on my Github!  <a href= "https://github.com/jbrosemer"><i class="fa fa-github-square w3-hover-opacity"></i></a></h2>
     <div class="w3-row-padding">
       <div class="w3-half">
-        <div class ="w3-hover-opacity">
-          <img src="./images/spider.jpg" style="width:100%" onclick="onClick(this)" alt="Brachiating robot desgined to traverse a monkey bar course.">
+          <div id="gifs-rows">
+            <!--
+            <img src="./images/spider.jpg" style="width:100%" onclick="onClick(this)" alt="Brachiating robot desgined to traverse a monkey bar course.">
+            -->
+            <img src="./images/spider.jpg" alt="Brachiating robot desgined to traverse a monkey bar course." class="preset-file" style="width:100%" onclick="onClick(this)">
+            <img src="./images/ezgif.com-gif-maker.gif" alt="Brachiating robot desgined to traverse a monkey bar course." class="gif-file" style="width:100%" onclick="onClick(this)">
+          </div>
+          <div id="gifs-rows1">
+            <img src="./images/wallace.png" alt="Self Balancing Robot that could pick itself up using its arms and balanced with combined data from a  Lidar and an IMU" class="preset-file1" style="width:100%" onclick="onClick(this)">
+            <img src="./images/wallace3-4.gif" alt="Self Balancing Robot that could pick itself up using its arms and balanced with combined data from a  Lidar and an IMU" class="gif-file1" style="width:100%" onclick="onClick(this)">
+          </div>
+        <div id="gifs-rows2">
+          <img src="./images/saltbae.jpeg" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt" class="preset-file2" style="width:100%" onclick="onClick(this)">
+          <img src="./images/salt.gif" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt" class="gif-file2" style="width:100%" onclick="onClick(this)">
         </div>
-        <div class ="w3-hover-opacity">
-        <img src="./images/wallace.png" style="width:100%" onclick="onClick(this)" alt="Self Balancing Robot that could pick itself up using its arms and balanced with combined data from a  Lidar and an IMU">
-      </div>
-      <div class ="w3-hover-opacity">
-        <img src="./images/saltbae.jpeg" style="width:100%" onclick="onClick(this)" alt="A rotating rack and pinion, using software I wrote to write letters from simple equations I also wrote with salt">
-      </div>
       </div>
   
       <div class="w3-half">
@@ -126,7 +150,8 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
   
 <!-- END PAGE CONTENT -->
 </div>
-
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 // Open and close sidebar
 function openNav() {
@@ -143,7 +168,20 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+$("img", "#gifs-rows").hover(function() {
+  $('.preset-file').toggle();
+  $('.gif-file').toggle();
+});
+$("img", "#gifs-rows1").hover(function() {
+  $('.preset-file1').toggle();
+  $('.gif-file1').toggle();
+});
+$("img", "#gifs-rows2").hover(function() {
+  $('.preset-file2').toggle();
+  $('.gif-file2').toggle();
+});
 </script>
+</head>
 
 </body>
 </html>
