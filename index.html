@@ -15,7 +15,16 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
   background-size: cover;
   min-height: 100%;
 }
-.button4 {font-family: "Montserrat", sans-serif}
+.button4 {
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+.button4:hover {background-color: whitesmoke;}
+
 .container {
   position: relative;
   width: 50%;
@@ -41,8 +50,6 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
 #gifs-rows2 img {
   cursor: pointer;
 }
-
-
 #gifs-rows .gif-file {
   display:none;
 }
@@ -67,11 +74,11 @@ body {background-color: whitesmoke;} h1,h2,h3,h4,h5,h6,p1 {font-family: "Montser
     <p></p>
     <img src="./images/meagain.JPG" alt="boy" class="w3-image w3-round" width="992" height="1108" style="padding:16px">
     <p></p>
-    <a href="resumefeb2022.pdf"><button class="button button4" w3-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download", sans-serif></i><b> Check out my Resume!</b>
+    <a href="resumefeb2022.pdf"><button class="button button4 w3-white w3-padding-large w3-margin-top">
+      <i class="fa fa-download", sans-serif></i>Check out my Resume!
     </button></a>
-    <a href="Jordyn_Brosemer_Portfolio.pdf"><button class="button button4" w3-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i><b> Download this Site as a PDF</b>
+    <a href="Jordyn_Brosemer_Portfolio.pdf"><button class="button button4 w3-white w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i>Download this Site as a PDF
     </button></a>
   </header>
   <!-- Modal for full size images on click-->
